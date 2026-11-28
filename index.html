@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ECEFF4">
+<script>
+/* light or dark before the first paint (the in-app choice, else the device's setting): see src/theme.ts */
+(function () {
+  var m = null; try { m = localStorage.getItem("dr-theme"); } catch (e) {}
+  var d = m === "dark" || (m !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+  document.documentElement.dataset.theme = d ? "dark" : "light";
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", d ? "#0F131A" : "#ECEFF4");
+})();
+</script>
+<meta name="description" content="DayRoute: plan work, habits, money and more, together.">
+<title>DayRoute</title>
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="manifest" href="./manifest.webmanifest">
+  <script type="module" crossorigin src="./assets/index-CXbLaSng.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C0kv4ail.css">
+</head>
+<body>
+<div id="root"></div>
+</body>
+</html>
